@@ -1,0 +1,31 @@
+@model EventoViewModel
+<form asp-action="Salvar" method="post">
+    <div>
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" />
+        <span asp-validation-for="Nome"></span>
+    </div>
+
+    <div>
+        <label asp-for="NumeroParticipantes"></label>
+        <input asp-for="NumeroParticipantes" type="number" />
+        <span asp-validation-for="NumeroParticipantes"></span>
+    </div>
+
+    <div>
+        <label asp-for="Data"></label>
+        <input asp-for="Data" type="date" />
+        <span asp-validation-for="Data"></span>
+    </div>
+
+    <div>
+        <input asp-for="Ativo" type="checkbox" /> Ativo
+        <span asp-validation-for="Ativo"></span>
+    </div>
+
+    <button type="submit">Salvar</button>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

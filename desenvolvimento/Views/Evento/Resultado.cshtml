@@ -1,0 +1,7 @@
+@model EventoViewModel
+<h2>@ViewData["Mensagem"]</h2>
+<p><b>Nome:</b> @Model.Nome</p>
+<p><b>Número de Participantes:</b> @Model.NumeroParticipantes</p>
+<p><b>Data:</b> @Model.Data.ToShortDateString()</p>
+<p><b>Ativo:</b> @(Model.Ativo ? "Sim" : "Não")</p>
+<a asp-action="Create">Voltar</a>
